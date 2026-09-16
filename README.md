@@ -1,4 +1,6 @@
 # Ecomer AI Shopping Assistant MVP
+<img width="1897" height="872" alt="image" src="https://github.com/user-attachments/assets/3a289d3d-ff63-4577-8f86-42408f5f5339" />
+
 
 Simple React + FastAPI shopping assistant with a RAG-style retrieval flow.
 
