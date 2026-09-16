@@ -17,6 +17,21 @@ Simple React + FastAPI shopping assistant with a RAG-style retrieval flow.
 
 ### 1. Run The Backend
 
+Create a local `.env` file first:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Then put your real DeepSeek key in `.env`:
+
+```text
+DEEPSEEK_API_KEY=your_real_key_here
+DEEPSEEK_MODEL=deepseek-chat
+```
+
+Do not commit `.env`.
+
 ```powershell
 venv\Scripts\python.exe -m uvicorn app.main:app --reload --port 8000
 ```
