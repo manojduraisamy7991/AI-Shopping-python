@@ -28,9 +28,19 @@ Then put your real DeepSeek key in `.env`:
 ```text
 DEEPSEEK_API_KEY=your_real_key_here
 DEEPSEEK_MODEL=deepseek-chat
+CHROMA_API_KEY=your_real_chroma_key_here
+CHROMA_TENANT=your_chroma_tenant_id
+CHROMA_DATABASE=your_chroma_database_name
+CHROMA_COLLECTION=products
 ```
 
 Do not commit `.env`.
+
+Install dependencies:
+
+```powershell
+venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 
 ```powershell
 venv\Scripts\python.exe -m uvicorn app.main:app --reload --port 8000

@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+from app.chroma_store import get_products_collection
 from app.rag import ShoppingRAG
 from app.seed import SEED_PRODUCTS
 
@@ -41,6 +42,12 @@ def home():
 @app.get("/health")
 def health():
     return {"status": "ok", "products_indexed": len(rag.products)}
+
+
+@app.get("/health/chroma")
+def chroma_health():
+    collection = get_products_collection()
+    return {"status": "ok", "collection": collection.name}
 
 
 @app.get("/products")
