@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+
+# Optional production upgrades for the PostgreSQL + vector DB step:
+# psycopg[binary]
+# pgvector
+# langchain
+# langchain-openai
